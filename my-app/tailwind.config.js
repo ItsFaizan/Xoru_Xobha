@@ -4,12 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        white_one: "#fffff",
-        white_two: "#FAFF4E",
-        white_three: "#F6EDFD",
-        green: "#48B25C",
-        blue: "#3B7DFC",
-        bg_black: "#0F0F19",
+        white_one: "#FFFBE4",
+        yellow: "#FFD700",
+        yellow_two: "#6C3903",
+        bg_black: "#0E0E0F",
       },
     },
   },

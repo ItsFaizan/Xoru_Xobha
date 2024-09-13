@@ -7,6 +7,7 @@ export default {
         white_one: "#FFFBE4",
         yellow: "#FFD700",
         yellow_two: "#6C3903",
+        yellow_three: "#FFF5C2",
         bg_black: "#0E0E0F",
       },
     },

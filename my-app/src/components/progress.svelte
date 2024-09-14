@@ -8,26 +8,26 @@
     }
   </script>
   
-  <div class="bg-white_one p-8 min-h-screen">
+  <div class="bg-white_one p-16 min-h-screen">
     <!-- Tabs -->
-    <div class="flex justify-between max-w-xl mx-auto mb-6 bg-yellow_three">
+    <div class="flex justify-center w-[66%] mx-auto mb-6 bg-yellow_three rounded-lg space-x-20">
       <button 
-        class="text-lg font-medium p-2 border-b-2 border-transparent hover:border-yellow-500 transition-all duration-300" 
-        class:border-yellow-600={activeTab === 'explore'}
+        class="text-lg font-bold p-4 border-b-2 border-transparent transition-all duration-300" 
+        class:border-yellow={activeTab === 'explore'}
         on:click={() => setTab('explore')}
       >
         Explore Naharkatia
       </button>
       <button 
-        class="text-lg font-medium p-2 border-b-2 border-transparent hover:border-yellow-500 transition-all duration-300" 
-        class:border-yellow-600={activeTab === 'inspire'}
+        class="text-lg font-bold p-4 border-b-2 border-transparent transition-all duration-300" 
+        class:border-yellow={activeTab === 'inspire'}
         on:click={() => setTab('inspire')}
       >
         Inspire Young Minds
       </button>
       <button 
-        class="text-lg font-medium p-2 border-b-2 border-transparent hover:border-yellow-500 transition-all duration-300" 
-        class:border-yellow-600={activeTab === 'create'}
+        class="text-lg font-bold p-4 border-b-2 border-transparent transition-all duration-300" 
+        class:border-yellow={activeTab === 'create'}
         on:click={() => setTab('create')}
       >
         Create Regional Impact
@@ -36,32 +36,32 @@
   
     <!-- Tab content -->
     {#if activeTab === 'explore'}
-      <div class="flex">
+      <div class="flex w-[66%] mx-auto">
         <!-- svelte-ignore a11y-img-redundant-alt -->
         <img src="/progress.svg" alt="Explore Image" class="w-1/2 rounded-lg shadow-lg" />
-        <div class="ml-6">
-          <h2 class="text-2xl font-bold">Find inspiration in the serenity and calmness of Naharkatia</h2>
-          <p class="mt-4 text-gray-700">
-            Xoru Xobha is based in Naharkatia for its peaceful environment...
+        <div class="ml-8">
+          <h2 class="text-3xl font-bold mt-4">Find inspiration in the serenity and calmness of Naharkatia</h2>
+          <p class="mt-8 text-[#5E5E5E]">
+            Xoru Xobha is based in Naharkatia for its peaceful environment, nestled in the green corners of Assam. Close to nature, it’s the perfect place for fostering creativity and expanding the scope of imagination. 
           </p>
-          <p class="mt-2 text-gray-500">
-            Additional text about Naharkatia, its culture, and impact on the region...
+          <p class="mt-8 text-[#5E5E5E]">
+            Away from the bustle of cities like Guwahati, Naharkatia offers the calm and focus essential for nurturing new ideas and building truly impactful things.
           </p>
         </div>
       </div>
     {/if}
   
     {#if activeTab === 'inspire'}
-      <div class="flex">
+      <div class="flex w-[66%] mx-auto">
         <!-- svelte-ignore a11y-img-redundant-alt -->
         <img src="/progress.svg" alt="Inspire Image" class="w-1/2 rounded-lg shadow-lg" />
-        <div class="ml-6">
-          <h2 class="text-2xl font-bold">Inspiring Young Minds</h2>
-          <p class="mt-4 text-gray-700">
-            Naharkatia offers young minds a space to dream big and turn their ideas into impactful solutions...
+        <div class="ml-8">
+          <h2 class="text-3xl font-bold mt-4">Inspire the innovators of tomorrow</h2>
+          <p class="mt-8 text-[#5E5E5E]">
+            Your experience holds the key to unlocking the potential of Assam’s brightest young minds. By sharing your journey, you’ll help them learn from real-world insights and guide them toward building impactful solutions. 
           </p>
-          <p class="mt-2 text-gray-500">
-            Additional text about inspiring young minds and their creative potential...
+          <p class="mt-8 text-[#5E5E5E]">
+            Together with Xoru Xobha, we can flourish a perfect environment for deep learning, collaboration, and focused growth, empowering the next generation of innovators.
           </p>
         </div>
       </div>
@@ -69,18 +69,23 @@
   
     {#if activeTab === 'create'}
       <!-- svelte-ignore a11y-img-redundant-alt -->
-      <div class="flex">
+      <div class="flex w-[66%] mx-auto">
         <img src="/progress.svg" alt="Impact Image" class="w-1/2 rounded-lg shadow-lg" />
-        <div class="ml-6">
-          <h2 class="text-2xl font-bold">Creating Regional Impact</h2>
-          <p class="mt-4 text-gray-700">
-            Through various initiatives, Naharkatia drives regional development and innovation...
+        <div class="ml-8">
+          <h2 class="text-3xl font-bold mt-4">Build a legacy of regional impact</h2>
+          <p class="mt-8 text-[#5E5E5E]">
+            By supporting local startups through Xoru Xobha, you’re not just helping individual founders—you’re driving real change in Assam’s economy and community. Your involvement accelerates innovation, creates jobs, and positions the region as a hub for entrepreneurial success. 
           </p>
-          <p class="mt-2 text-gray-500">
-            Additional text about creating regional impact and sustainability efforts...
+          <p class="mt-8 text-[#5E5E5E]">
+            The impact you create will leave a lasting legacy, with the people of Naharkatia remembering your contribution as a key turning point in their journey toward progress and prosperity.
           </p>
         </div>
       </div>
     {/if}
   </div>
   
+  <div class=" bg-yellow_three pb-4">
+    <p class="text-4xl font-bold pt-16 mb-4 text-center">The tale of a fresh beginning</p>
+    <p class="text-md text-[#5E5E5E] w-[50%] mx-auto text-center">After working online for years and serving U.S. markets, I craved a much-needed change. Assam’s young talents often leave for opportunities elsewhere and never return. I wanted to create a vibrant community of brilliant minds, proving that building in Assam and thriving is not only possible but the real challenge worth taking on.</p>
+    <p class=" text-center text-[#BBB597] py-6">Pingal Pratyush, Founder of Xoru Xobha</p>
+  </div>

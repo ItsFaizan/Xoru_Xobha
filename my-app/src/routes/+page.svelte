@@ -3,13 +3,15 @@
     import Hero from '../components/hero.svelte'
     import "../app.css";
   import Progress from '../components/progress.svelte';
+  import Beginning from '../components/beginning.svelte';
    
 </script>
 
-<main class="bg-white_three ">
+<main >
     <Header/>
     <Hero/>  
     <Progress />
+    <Beginning />
    
 </main>
 

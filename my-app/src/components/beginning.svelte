@@ -14,7 +14,7 @@
   </script>
   
   <!-- Timeline container -->
-  <div class="relative bg-yellow_three flex justify-center items-center overflow-hidden">
+  <div class="relative bg-yellow_three flex justify-center items-center overflow-hidden pb-20">
     <!-- Timeline items -->
     <div class="flex space-x-10 transition-transform duration-700 ease-in-out relative" style="transform: translateX({-activeIndex * 10}%)">
       
@@ -22,9 +22,12 @@
       <div class="absolute top-[173.5px] left-40 w-[calc(100%-24.5%)] h-0.5 bg-[#9D9D9D] mx-auto"></div>
   
       {#each timelineItems as item, index}
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <!-- svelte-ignore a11y-no-static-element-interactions -->
         <div on:click={() => selectItem(index)} class="relative flex flex-col items-center cursor-pointer">
           <div class="flex items-center justify-center mb-4">
             <!-- Dynamically load different images for each item -->
+            <!-- svelte-ignore a11y-img-redundant-alt -->
             <img src={item.image} alt="Profile Image" class="{activeIndex === index ? 'opacity-100 w-28 h-auto' : 'opacity-40 w-28 h-auto'} transition-opacity duration-300" />
           </div>
   

@@ -4,6 +4,8 @@
     import "../app.css";
   import Progress from '../components/progress.svelte';
   import Beginning from '../components/beginning.svelte';
+  import Cta from '../components/cta.svelte';
+  import Footer from '../components/footer.svelte';
    
 </script>
 
@@ -12,6 +14,8 @@
     <Hero/>  
     <Progress />
     <Beginning />
+    <Cta />
+    <Footer />
    
 </main>
 

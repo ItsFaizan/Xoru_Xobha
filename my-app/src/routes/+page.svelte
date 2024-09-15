@@ -11,7 +11,7 @@
 
 <main >
     <Header/>
-    <Hero/>  
+    <Hero/> 
     <Progress />
     <Beginning />
     <Cta />

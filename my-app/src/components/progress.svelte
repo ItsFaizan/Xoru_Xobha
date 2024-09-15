@@ -1,15 +1,40 @@
 <script>
-  // @ts-nocheck
-  let activeTab = 'explore';
+// @ts-nocheck
+
+  import { onMount } from "svelte";
+
+let isIconVisible = false;
+let activeTab = 'explore';
+
+
+onMount(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          isIconVisible = true;
+          observer.unobserve(entry.target); // Optional: Stop observing after triggering animation
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  // Observe the component
+  const target = document.querySelector(".animate-on-scroll");
+  if (target) observer.observe(target);
+});
 
   function setTab(tab) {
     activeTab = tab;
   }
 </script>
 
-<div class="bg-white_one p-8 ">
+<div class="bg-white_one p-8 animate-on-scroll ">
   <!-- Tabs -->
-  <div class="flex flex-row justify-center w-full md:w-[92%] xl:w-[66%] max-w-5xl mx-auto mb-6 bg-yellow_three rounded-lg md:space-x-10 lg:space-x-20">
+  <div class="flex flex-row justify-center w-full md:w-[92%] xl:w-[66%] max-w-5xl mx-auto mb-6 bg-yellow_three rounded-lg md:space-x-10 lg:space-x-20 fade-in-icons {isIconVisible
+        ? 'visible'
+        : ''}" >
     <button 
       class="text-xs md:text-lg font-bold p-4 border-b-2 border-transparent transition-all duration-300" 
       class:border-yellow={activeTab === 'explore'}
@@ -35,7 +60,10 @@
 
   <!-- Tab content -->
   {#if activeTab === 'explore'}
-    <div class="flex flex-col lg:flex-row w-full md:w-[92%] xl:w-[66%] max-w-5xl mx-auto">
+    <div class="flex flex-col lg:flex-row w-full md:w-[92%] xl:w-[66%] max-w-5xl mx-auto fade-in-icons {isIconVisible
+        ? 'visible'
+        : ''}">
+      <!-- svelte-ignore a11y-img-redundant-alt -->
       <img src="/progress.svg" alt="Explore Image" class="w-full lg:w-1/2 rounded-lg shadow-lg" />
       <div class="lg:ml-8 mt-6 lg:mt-0">
         <h2 class="text-2xl md:text-3xl font-bold mt-4">Find inspiration in the serenity and calmness of Naharkatia</h2>
@@ -51,6 +79,7 @@
 
   {#if activeTab === 'inspire'}
     <div class="flex flex-col lg:flex-row w-full md:w-[92%] xl:w-[66%] max-w-5xl mx-auto">
+      <!-- svelte-ignore a11y-img-redundant-alt -->
       <img src="/progress.svg" alt="Inspire Image" class="w-full lg:w-1/2 rounded-lg shadow-lg" />
       <div class="lg:ml-8 mt-6 lg:mt-0">
         <h2 class="text-2xl md:text-3xl font-bold mt-4">Inspire the innovators of tomorrow</h2>
@@ -66,6 +95,7 @@
 
   {#if activeTab === 'create'}
     <div class="flex flex-col lg:flex-row w-full md:w-[92%] xl:w-[66%] max-w-5xl mx-auto">
+      <!-- svelte-ignore a11y-img-redundant-alt -->
       <img src="/progress.svg" alt="Impact Image" class="w-full lg:w-1/2 rounded-lg shadow-lg" />
       <div class="lg:ml-8 mt-6 lg:mt-0">
         <h2 class="text-2xl md:text-3xl font-bold mt-4">Build a legacy of regional impact</h2>
@@ -80,10 +110,14 @@
   {/if}
 </div>
 
-<div class="bg-yellow_three py-4">
-  <p class="text-2xl md:text-4xl font-bold pt-8 mb-4 text-center">The tale of a fresh beginning</p>
-  <p class="text-sm md:text-md text-[#5E5E5E] w-[90%] md:w-[50%] mx-auto text-center">
-    After working online for years and serving U.S. markets, I craved a much-needed change. Assam’s young talents often leave for opportunities elsewhere and never return. I wanted to create a vibrant community of brilliant minds, proving that building in Assam and thriving is not only possible but the real challenge worth taking on.
-  </p>
-  <p class="text-center text-[#BBB597] py-6 text-xs md:text-base">Pingal Pratyush, Founder of Xoru Xobha</p>
-</div>
+
+<style>
+  /* Additional styles can be added here if needed */
+  .fade-in-icons {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+  }
+  .fade-in-icons.visible {
+    opacity: 1;
+  }
+</style>

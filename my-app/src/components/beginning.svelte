@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { onMount } from "svelte";
+
   let activeIndex = 0;
   let startX = 0; // Store the starting position of a swipe
   let endX = 0;   // Store the ending position of a swipe
@@ -50,11 +52,46 @@
     startX = 0;
     endX = 0;
   };
+
+let isIconVisible = false;
+
+
+onMount(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          isIconVisible = true;
+          observer.unobserve(entry.target); // Optional: Stop observing after triggering animation
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  // Observe the component
+  const target = document.querySelector(".animate-on-scroll2");
+  if (target) observer.observe(target);
+});
 </script>
 
+<div id="story" class="bg-yellow_three py-4 animate-on-scroll2">
+  <p class="text-2xl md:text-4xl font-bold pt-8 mb-4 text-center fade-in-icons {isIconVisible
+        ? 'visible'
+        : ''}">The tale of a fresh beginning</p>
+  <p class="text-sm md:text-md text-[#5E5E5E] w-[90%] md:w-[50%] mx-auto text-center fade-in-icons {isIconVisible
+        ? 'visible'
+        : ''}">
+    After working online for years and serving U.S. markets, I craved a much-needed change. Assam’s young talents often leave for opportunities elsewhere and never return. I wanted to create a vibrant community of brilliant minds, proving that building in Assam and thriving is not only possible but the real challenge worth taking on.
+  </p>
+  <p class="text-center text-[#BBB597] py-6 text-xs md:text-base fade-in-icons {isIconVisible
+        ? 'visible'
+        : ''}">Pingal Pratyush, Founder of Xoru Xobha</p>
+</div>
+
 <!-- Timeline container -->
-<div 
-  class="relative bg-yellow_three flex justify-center items-center overflow-hidden pb-20"
+<div
+  class="relative bg-yellow_three flex justify-center items-center overflow-hidden pb-20 animate-on-scroll"
   on:touchstart={handleTouchStart}
   on:touchmove={handleTouchMove}
   on:touchend={handleTouchEnd}
@@ -90,3 +127,14 @@
   </div>
 
 </div>
+
+<style>
+  /* Additional styles can be added here if needed */
+  .fade-in-icons {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+  }
+  .fade-in-icons.visible {
+    opacity: 1;
+  }
+</style>

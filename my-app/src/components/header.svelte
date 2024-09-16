@@ -54,7 +54,7 @@
 
 <!-- Mobile Sidebar Menu -->
 <div
-  class="lg:hidden fixed top-0 left-0 h-full bg-bg_black text-white_one sm:w-52 w-40 transform transition-transform duration-300 ease-in-out z-20"
+  class="lg:hidden fixed top-0 left-0 h-full bg-bg_black text-white_one sm:w-52 w-full transform transition-transform duration-300 ease-in-out z-20"
   class:translate-x-0={isMenuOpen}
   class:-translate-x-full={!isMenuOpen}
 >

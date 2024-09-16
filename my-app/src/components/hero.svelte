@@ -47,7 +47,7 @@ onMount(() => {
   <img
     src="/brush.svg"
     alt="Brush Icon"
-    class="hidden xl:block absolute left-[28%] top-10 h-10 w-10 fade-in-icons max-w-xl"
+    class="hidden xl:block absolute left-[28%] top-10 h-10 w-10 fade-in-icons"
   />
   <img
     src="/star.svg"
@@ -84,7 +84,7 @@ onMount(() => {
     <!-- Button -->
 
     <button
-      class="bg-yellow text-yellow_two font-extrabold rounded-md px-6 py-2 md:py-3 my-4 md:my-8 hover:bg-[#FFEB7E]"
+      class="bg-yellow text-yellow_two font-extrabold rounded-md px-4 py-2 my-4 md:my-8 hover:bg-[#FFEB7E]"
       on:click={() =>
         (window.location.href =
           "mailto:speak@xoruxobha.com?subject=I would love to speak&body=Hi. I would love to be a speaker for Xoru Xobha. Please get back to me as soon as possible.")}

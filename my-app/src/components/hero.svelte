@@ -73,7 +73,7 @@ onMount(() => {
     >
       Share your expertise,
     </h1>
-    <span class="text-3xl md:text-4xl lg:text-5xl font-bold max-w-lg lg:max-w-xl fade-in mt-4">fuel Assam’s future</span>
+    <span class="text-3xl md:text-4xl lg:text-5xl font-bold max-w-lg lg:max-w-xl fade-in lg:mt-4 mt-0">fuel Assam’s future</span>
     <!-- Squiggly Line -->
     <img
       src="/line.svg"

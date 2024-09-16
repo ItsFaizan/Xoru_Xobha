@@ -84,7 +84,7 @@ onMount(() => {
     <!-- Button -->
 
     <button
-      class="bg-yellow text-yellow_two font-extrabold rounded-md px-4 py-2 my-4 md:my-8 hover:bg-[#FFEB7E]"
+      class="bg-yellow text-yellow_two font-extrabold rounded-md px-4 py-2 my-4 md:my-8 hover:bg-[#FFEB7E] text-sm sm:text-base"
       on:click={() =>
         (window.location.href =
           "mailto:speak@xoruxobha.com?subject=I would love to speak&body=Hi. I would love to be a speaker for Xoru Xobha. Please get back to me as soon as possible.")}

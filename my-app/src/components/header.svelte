@@ -22,7 +22,7 @@
 
   <!-- Button (Desktop) -->
   <button
-    class="hidden lg:flex bg-yellow text-yellow_two font-bold px-4 py-2 hover:bg-[#FFEB7E] ml-auto text-sm sm:text-base"
+    class="hidden lg:flex bg-yellow text-yellow_two font-bold px-4 py-2 rounded-md hover:bg-[#FFEB7E] ml-auto text-sm sm:text-base"
     on:click={() =>
       (window.location.href =
         "mailto:speak@xoruxobha.com?subject=I would love to speak&body=Hi. I would love to be a speaker for Xoru Xobha. Please get back to me as soon as possible.")}
@@ -84,15 +84,6 @@
     <li><a href="#story" class="hover:text-[#FFEB7E]">Story</a></li>
   </ul>
 
-  <!-- Mobile Button -->
-  <button
-    class="bg-yellow text-yellow_two font-bold sm:px-4 sm:py-2 px-3 py-2 hover:bg-[#FFEB7E] mt-6 mx-4 text-xs sm:text-base"
-    on:click={() =>
-      (window.location.href =
-        "mailto:speak@xoruxobha.com?subject=I would love to speak&body=Hi. I would love to be a speaker for Xoru Xobha. Please get back to me as soon as possible.")}
-  >
-    Become a speaker
-  </button>
 </div>
 
 <!-- Background Overlay -->

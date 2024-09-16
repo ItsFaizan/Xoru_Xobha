@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte";
   let isPlaying = false;
-  const videoId = "AUw7laSlcbo"; // YouTube video ID
+  const videoId = "ggevvYTvBpk"; // YouTube video ID
   const videoThumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 
   // Function to handle play and maximize
@@ -73,7 +73,7 @@ onMount(() => {
     >
       Share your expertise,<br />fuel Assam’s future
     </h1>
-
+    <p>After you are satisfied Kindly can you give me a good review on fiverr as it can help me get my gig ranked. I will remove this line after order completion dont worry I didnt ask you on fiverr because its not allowed there</p>
     <!-- Squiggly Line -->
     <img
       src="/line.svg"
@@ -84,7 +84,7 @@ onMount(() => {
     <!-- Button -->
 
     <button
-      class="bg-yellow text-yellow_two font-extrabold px-6 py-2 md:py-3 my-4 md:my-8 hover:bg-[#FFEB7E]"
+      class="bg-yellow text-yellow_two font-extrabold rounded-md px-6 py-2 md:py-3 my-4 md:my-8 hover:bg-[#FFEB7E]"
       on:click={() =>
         (window.location.href =
           "mailto:speak@xoruxobha.com?subject=I would love to speak&body=Hi. I would love to be a speaker for Xoru Xobha. Please get back to me as soon as possible.")}

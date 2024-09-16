@@ -79,7 +79,7 @@ onMount(() => {
   <p class="text-2xl md:text-4xl font-bold pt-8 mb-4 text-center fade-in-icons {isIconVisible
         ? 'visible'
         : ''}">The tale of a fresh beginning</p>
-  <p class="text-sm md:text-md text-[#5E5E5E] w-[90%] md:w-[50%] mx-auto text-center fade-in-icons {isIconVisible
+  <p class="text-sm md:text-md text-[#5E5E5E] w-[90%] max-w-xl md:w-[50%] leading-8 mx-auto text-center fade-in-icons {isIconVisible
         ? 'visible'
         : ''}">
     After working online for years and serving U.S. markets, I craved a much-needed change. Assam’s young talents often leave for opportunities elsewhere and never return. I wanted to create a vibrant community of brilliant minds, proving that building in Assam and thriving is not only possible but the real challenge worth taking on.

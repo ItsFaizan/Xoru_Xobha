@@ -61,7 +61,7 @@
     </div>
   
     <!-- Tab content with fade effect -->
-    <div class="tab-content fade-in {transitioning ? 'fading' : 'visible'}">
+    <div>
       {#if activeTab === 'explore'}
         <div class="flex flex-col lg:flex-row w-full md:w-[92%] xl:w-[66%] max-w-5xl mx-auto">
           <img src="/progress.svg" alt="Explore Image" class="w-full lg:w-1/2 rounded-lg shadow-lg" />
@@ -118,15 +118,5 @@
       opacity: 1;
     }
   
-    .fade-in {
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-    }
-    .fade-in.visible {
-      opacity: 1;
-    }
-    .fade-in.fading {
-      opacity: 0;
-    }
   </style>
   

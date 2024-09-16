@@ -41,13 +41,13 @@ onMount(() => {
 </script>
 
 <!-- Main Section -->
-<div class="bg-bg_black text-white_one text-center py-32 lg:py-60 relative">
+<div class="bg-bg_black text-white_one text-center py-32 lg:py-60 relative ">
   <!-- Icons (Only visible on large screens) -->
   <!-- Icons (Only visible on large screens) -->
   <img
     src="/brush.svg"
     alt="Brush Icon"
-    class="hidden xl:block absolute left-[28%] top-10 h-10 w-10 fade-in-icons"
+    class="hidden xl:block absolute left-[28%] top-10 h-10 w-10 fade-in-icons max-w-xl"
   />
   <img
     src="/star.svg"
@@ -71,14 +71,14 @@ onMount(() => {
     <h1
       class="text-3xl md:text-4xl lg:text-5xl font-bold max-w-lg lg:max-w-xl -mt-8 lg:-mt-40 fade-in"
     >
-      Share your expertise,<br />fuel Assam’s future
+      Share your expertise,
     </h1>
-    <p>After you are satisfied Kindly can you give me a good review on fiverr as it can help me get my gig ranked. I will remove this line after order completion dont worry I didnt ask you on fiverr because its not allowed there</p>
+    <span class="text-3xl md:text-4xl lg:text-5xl font-bold max-w-lg lg:max-w-xl fade-in mt-4">fuel Assam’s future</span>
     <!-- Squiggly Line -->
     <img
       src="/line.svg"
       alt="Squiggly Line"
-      class="mt-4 mb-6 w-1/2 md:w-[30%]"
+      class="mt-4 mb-6 w-1/2 md:w-[30%] max-w-lg"
     />
 
     <!-- Button -->
